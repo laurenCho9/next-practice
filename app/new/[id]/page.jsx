@@ -1,8 +1,14 @@
 import React from "react";
 
-const NewsIdPage = ({ params }) => {
-  console.log("news id", params.id); // 왜 콘솔이 안보일까?
-  return <div>hello {params.id}</div>;
+const NewsIdPage = ({ params, searchParams }) => {
+  console.log("news id", params.id);
+  console.log("searchParams", searchParams);
+  return (
+    <div>
+      hello {params.id}
+      hello {searchParams.test}
+    </div>
+  );
 };
 
 export default NewsIdPage;
